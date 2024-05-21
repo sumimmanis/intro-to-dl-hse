@@ -54,3 +54,7 @@
 * [2021-2022](https://github.com/isadrtdinov/intro-to-dl-hse/tree/2021-2022)
 * [2022-2023](https://github.com/isadrtdinov/intro-to-dl-hse/tree/2022-2023)
 * [2023-2024](https://github.com/isadrtdinov/intro-to-dl-hse/tree/2023-2024)
+
+## Вопросы для подготовки к экзамену
+
+* [2024](https://github.com/isadrtdinov/intro-to-dl-hse/blob/master-2024/homeworks-theory/exam-questions.pdf)
