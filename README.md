@@ -19,7 +19,7 @@
 ## Лекции
 
 [Глоссарий](https://github.com/isadrtdinov/intro-to-dl-hse/blob/2024-2025/glossary.md) с терминами.
-1. Метод обратного распространения ошибки, полносвязные нейронные сети TBD
+1. Метод обратного распространения ошибки, полносвязные нейронные сети [запись](https://youtu.be/dQw4w9WgXcQ), [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-01-mlp.pdf)
 
 ## Семинары
 
