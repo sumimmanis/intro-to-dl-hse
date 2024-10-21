@@ -21,6 +21,7 @@
 [Глоссарий](https://github.com/isadrtdinov/intro-to-dl-hse/blob/2024-2025/glossary.md) с терминами.
 1. Метод обратного распространения ошибки, полносвязные нейронные сети: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-01-mlp.pdf)
 2. Кросс-энтропийная функция потерь, Dropout, Batch Normalization: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-02-dropout-batchnorm.pdf)
+2. Оптимизация нейронных сетей: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-03-optimization.pdf)
 
 ## Семинары
 
@@ -29,30 +30,10 @@
 
 ## Маленькие домашние задания
 
-TBD
-
-```
-  /\
- /  \
-.∧＿∧
-( ･ω･｡)つ━☆・*。
-⊂　 ノ 　　　・゜+.
-しーＪ　　　°。+ *´¨)
-　　　　　　　　　.· ´¸.·*´¨) ¸.·*¨)
-　　　　　　　　　　(¸.·´ (¸.·’* ☆ 
-```
+1. Автоматическое дифференцирование и полносвязные нейронные сети: [ссылка](https://github.com/xiyori/intro-to-dl-hse/tree/2024-2025/homeworks-small/shw-01-mlp)
 
 ## Теоретические домашние задания
 
-TBD
+Теоретические ДЗ не сдаются и предлагаются студентам для самостоятельного решения и ознакомления
 
-```
-  /\
- /  \
-.∧＿∧
-( ･ω･｡)つ━☆・*。
-⊂　 ノ 　　　・゜+.
-しーＪ　　　°。+ *´¨)
-　　　　　　　　　.· ´¸.·*´¨) ¸.·*¨)
-　　　　　　　　　　(¸.·´ (¸.·’* ☆ 
-```
+1. Полносвязные нейронные сети: [ссылка](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/homeworks-theory/thw-01-mlp.pdf)
