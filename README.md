@@ -21,7 +21,8 @@
 [Глоссарий](https://github.com/isadrtdinov/intro-to-dl-hse/blob/2024-2025/glossary.md) с терминами.
 1. Метод обратного распространения ошибки, полносвязные нейронные сети: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-01-mlp.pdf)
 2. Кросс-энтропийная функция потерь, Dropout, Batch Normalization: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-02-dropout-batchnorm.pdf)
-2. Оптимизация нейронных сетей: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-03-optimization.pdf)
+3. Оптимизация нейронных сетей: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-03-optimization.pdf)
+4. Операция свертки: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-04-convolution.pdf), [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-05-cnn.pdf)
 
 ## Семинары
 
