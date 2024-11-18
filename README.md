@@ -22,7 +22,9 @@
 1. Метод обратного распространения ошибки, полносвязные нейронные сети: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-01-mlp.pdf)
 2. Кросс-энтропийная функция потерь, Dropout, Batch Normalization: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-02-dropout-batchnorm.pdf)
 3. Оптимизация нейронных сетей: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-03-optimization.pdf)
-4. Операция свертки: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-04-convolution.pdf), [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-05-cnn.pdf)
+4. Операция свертки: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-04-convolution.pdf)
+5. Сверточные архитектуры: [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-06-convolutional.pdf)
+6. Задачи компьютерного зрения: [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-07-cv.pdf)
 
 ## Семинары
 
@@ -32,6 +34,7 @@
 ## Маленькие домашние задания
 
 1. Автоматическое дифференцирование и полносвязные нейронные сети: [ссылка](https://github.com/xiyori/intro-to-dl-hse/tree/2024-2025/homeworks-small/shw-01-mlp)
+2. Сверточный классификатор: [ссылка](https://github.com/xiyori/intro-to-dl-hse/tree/2024-2025/homeworks-small/shw-02-cnn)
 
 ## Теоретические домашние задания
 
