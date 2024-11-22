@@ -2,7 +2,6 @@ import numpy as np
 from typing import Tuple
 from .base import Module, Optimizer
 
-
 class SGD(Optimizer):
     """
     Optimizer implementing stochastic gradient descent with momentum
@@ -28,13 +27,14 @@ class SGD(Optimizer):
 
         for param, grad, m in zip(parameters, gradients, self.state['m']):
             """
-            your code here ｀、ヽ｀、ヽ(ノ＞＜)ノ ヽ｀☂｀、ヽ
               - update momentum variable (m)
               - update parameter variable (param)
             hint: consider using np.add(..., out=m) for in place addition,
               i.e. we need to change original array, not its copy
             """
-            pass
+
+            np.add(self.momentum * m, grad + self.weight_decay * param, out=m)
+            np.add(param, - self.lr * m, out=param)
 
 
 class Adam(Optimizer):
@@ -68,13 +68,24 @@ class Adam(Optimizer):
 
         self.state['t'] += 1
         t = self.state['t']
+
+        beta1_t = (1 - self.beta1 ** t)
+        beta2_t = (1 - self.beta2 ** t)
         for param, grad, m, v in zip(parameters, gradients, self.state['m'], self.state['v']):
             """
-            your code here ｀、ヽ｀、ヽ(ノ＞＜)ノ ヽ｀☂｀、ヽ
               - update first moment variable (m)
               - update second moment variable (v)
               - update parameter variable (param)
             hint: consider using np.add(..., out=m) for in place addition,
               i.e. we need to change original array, not its copy
             """
-            pass
+            
+            g = grad + self.weight_decay * param
+
+            np.add(self.beta1 * m, (1 - self.beta1) * g, out=m)
+            np.add(self.beta2 * v, (1 - self.beta2) * g**2, out=v)
+
+            m_hat = m / beta1_t
+            v_hat = v / beta2_t
+
+            np.add(param, - self.lr * m_hat / (np.sqrt(v_hat) + self.eps), out=param)
