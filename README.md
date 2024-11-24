@@ -18,18 +18,23 @@
 
 ## Лекции
 
-[Глоссарий](https://github.com/isadrtdinov/intro-to-dl-hse/blob/2024-2025/glossary.md) с терминами.
+[Глоссарий](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/glossary.md) с терминами.
 1. Метод обратного распространения ошибки, полносвязные нейронные сети: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-01-mlp.pdf)
 2. Кросс-энтропийная функция потерь, Dropout, Batch Normalization: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-02-dropout-batchnorm.pdf)
 3. Оптимизация нейронных сетей: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-03-optimization.pdf)
 4. Операция свертки: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-04-convolution.pdf)
 5. Сверточные архитектуры: [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-06-convolutional.pdf)
 6. Задачи компьютерного зрения: [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-07-cv.pdf)
+7. Токенизация, эмбеддинги, TextCNN: [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-08-embeddings.pdf)
 
 ## Семинары
 
 1. Введение в библиотеку PyTorch. Автоматическое дифференцирование: TBD
 2. Полносвязные нейронные сети. Общая схема пайплайна обучения на PyTorch: TBD
+3. Операция свертки: TBD
+4. Сверточные архитектуры: TBD
+5. Семантическая сегментация и детекция: TBD
+6. Word2Vec, TextCNN: TBD
 
 ## Маленькие домашние задания
 
@@ -41,3 +46,4 @@
 Теоретические ДЗ не сдаются и предлагаются студентам для самостоятельного решения и ознакомления
 
 1. Полносвязные нейронные сети: [ссылка](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/homeworks-theory/thw-01-mlp.pdf)
+2. Сверточные нейронные сети: [ссылка](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/homeworks-theory/thw-02-cnn.pdf)
