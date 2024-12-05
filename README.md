@@ -26,6 +26,7 @@
 5. Сверточные архитектуры: [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-06-convolutional.pdf)
 6. Задачи компьютерного зрения: [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-07-cv.pdf)
 7. Токенизация, эмбеддинги, TextCNN: [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-08-embeddings.pdf)
+8. Рекуррентные нейронные сети: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-08-rnn.pdf)
 
 ## Семинары
 
@@ -35,6 +36,8 @@
 4. Сверточные архитектуры: TBD
 5. Семантическая сегментация и детекция: TBD
 6. Word2Vec, TextCNN: TBD
+7. Language models, image captioning: TBD
+8. Архитектура трансформера: TBD
 
 ## Маленькие домашние задания
 
