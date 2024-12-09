@@ -27,6 +27,7 @@
 6. Задачи компьютерного зрения: [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-07-cv.pdf)
 7. Токенизация, эмбеддинги, TextCNN: [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-08-embeddings.pdf)
 8. Рекуррентные нейронные сети: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-08-rnn.pdf)
+9. Архитектура трансформера: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-09-transformer.pdf)
 
 ## Семинары
 
