@@ -28,6 +28,7 @@
 7. Токенизация, эмбеддинги, TextCNN: [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-08-embeddings.pdf)
 8. Рекуррентные нейронные сети: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-08-rnn.pdf)
 9. Архитектура трансформера: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-09-transformer.pdf)
+10. Self-supervised learning, BERT, SimCLR: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-10-self-supervised.pdf)
 
 ## Семинары
 
@@ -39,6 +40,7 @@
 6. Word2Vec, TextCNN: TBD
 7. Language models, image captioning: TBD
 8. Архитектура трансформера: TBD
+9. BERT, question answering: TBD
 
 ## Маленькие домашние задания
 
