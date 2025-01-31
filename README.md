@@ -18,26 +18,41 @@
 
 ## Лекции
 
-[Глоссарий](https://github.com/isadrtdinov/intro-to-dl-hse/blob/2024-2025/glossary.md) с терминами.
-1. Метод обратного распространения ошибки, полносвязные нейронные сети: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-01-mlp.pdf)
+[Глоссарий](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/glossary.md) с терминами.
+1. Метод обратного распространения ошибки, полносвязные нейронные сети: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-01-mlp.pdf), [конспект](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-latex/notes-01-mlp.pdf)
 2. Кросс-энтропийная функция потерь, Dropout, Batch Normalization: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-02-dropout-batchnorm.pdf)
 3. Оптимизация нейронных сетей: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-03-optimization.pdf)
-4. Операция свертки: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-04-convolution.pdf)
-5. Сверточные архитектуры: [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-06-convolutional.pdf)
-6. Задачи компьютерного зрения: [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-07-cv.pdf)
+4. Операция свертки: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-04-convolution.pdf), [запись](https://disk.yandex.ru/d/yNk-VgpNK3qNbA)
+5. Сверточные архитектуры: [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-05-convolutional.pdf)
+6. Задачи компьютерного зрения: [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-06-cv.pdf)
+7. Токенизация, эмбеддинги, TextCNN: [слайды](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-07-embeddings.pdf), [конспект](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-latex/notes-07-embeddings.pdf)
+8. Рекуррентные нейронные сети: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-08-rnn.pdf)
+9. Архитектура трансформера: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-09-transformer.pdf)
+10. Self-supervised learning, BERT, SimCLR: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-10-self-supervised.pdf)
+11. Трансформеры для компьютерного зрения: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-11-vit.pdf), [запись](https://disk.yandex.ru/i/QNtUCrvxb24asg)
+12. Оптимизации для применения нейронных сетей: [доска](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/lecture-notes/notes-12-opt-inference.pdf)
 
 ## Семинары
 
 1. Введение в библиотеку PyTorch. Автоматическое дифференцирование: TBD
 2. Полносвязные нейронные сети. Общая схема пайплайна обучения на PyTorch: TBD
+3. Операция свертки: TBD
+4. Сверточные архитектуры: TBD
+5. Семантическая сегментация и детекция: TBD
+6. Word2Vec, TextCNN: TBD
+7. Language models, image captioning: TBD
+8. Архитектура трансформера: TBD
+9. BERT, question answering: TBD
 
 ## Маленькие домашние задания
 
 1. Автоматическое дифференцирование и полносвязные нейронные сети: [ссылка](https://github.com/xiyori/intro-to-dl-hse/tree/2024-2025/homeworks-small/shw-01-mlp)
 2. Сверточный классификатор: [ссылка](https://github.com/xiyori/intro-to-dl-hse/tree/2024-2025/homeworks-small/shw-02-cnn)
+3. RNN и языковые модели: [ссылка](https://github.com/xiyori/intro-to-dl-hse/tree/2024-2025/homeworks-small/shw-03-rnn)
 
 ## Теоретические домашние задания
 
 Теоретические ДЗ не сдаются и предлагаются студентам для самостоятельного решения и ознакомления
 
 1. Полносвязные нейронные сети: [ссылка](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/homeworks-theory/thw-01-mlp.pdf)
+2. Сверточные нейронные сети: [ссылка](https://github.com/xiyori/intro-to-dl-hse/blob/2024-2025/homeworks-theory/thw-02-cnn.pdf)
