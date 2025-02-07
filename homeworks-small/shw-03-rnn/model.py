@@ -5,8 +5,14 @@ from dataset import TextDataset
 
 
 class LanguageModel(nn.Module):
-    def __init__(self, dataset: TextDataset, embed_size: int = 256, hidden_size: int = 256,
-                 rnn_type: Type = nn.RNN, rnn_layers: int = 1):
+    def __init__(
+        self,
+        dataset: TextDataset,
+        embed_size: int = 256,
+        hidden_size: int = 256,
+        rnn_type: Type = nn.RNN,
+        rnn_layers: int = 1,
+    ):
         """
         Model for text generation
         :param dataset: text data dataset (to extract vocab_size and max_length)
@@ -24,9 +30,18 @@ class LanguageModel(nn.Module):
         YOUR CODE HERE (⊃｡•́‿•̀｡)⊃━✿✿✿✿✿✿
         Create necessary layers
         """
-        self.embedding = None
-        self.rnn = None
-        self.linear = None
+        self.embedding = nn.Embedding(
+            num_embeddings=self.vocab_size, embedding_dim=embed_size
+        )
+
+        self.rnn = rnn_type(
+            input_size=embed_size,
+            hidden_size=hidden_size,
+            num_layers=rnn_layers,
+            batch_first=True,
+        )
+
+        self.linear = nn.Linear(in_features=hidden_size, out_features=self.vocab_size)
 
     def forward(self, indices: torch.Tensor, lengths: torch.Tensor) -> torch.Tensor:
         """
@@ -36,29 +51,37 @@ class LanguageModel(nn.Module):
         :param lengths: LongTensor of lengths of size (batch_size, )
         :return: FloatTensor of logits of shape (batch_size, length, vocab_size)
         """
-        # This is a placeholder, you may remove it.
-        logits = torch.randn(
-            indices.shape[0], indices.shape[1], self.vocab_size,
-            device=indices.device
-        )
+
         """
         YOUR CODE HERE (⊃｡•́‿•̀｡)⊃━✿✿✿✿✿✿
         Convert indices to embeddings, pass them through recurrent layers
         and apply output linear layer to obtain the logits
         """
+        embedded = self.embedding(indices)
+
+        packed = nn.utils.rnn.pack_padded_sequence(
+            embedded, lengths.cpu(), batch_first=True, enforce_sorted=False
+        )
+
+        output_packed, _ = self.rnn(packed)
+
+        output, _ = nn.utils.rnn.pad_packed_sequence(output_packed, batch_first=True)
+
+        logits = self.linear(output)
         return logits
 
+    @property
+    def device(self):
+        return next(self.parameters()).device
+
     @torch.inference_mode()
-    def inference(self, prefix: str = '', temp: float = 1.) -> str:
+    def inference(self, prefix: str = "", temp: float = 1.0) -> str:
         """
         Generate new text with an optional prefix
         :param prefix: prefix to start generation
         :param temp: sampling temperature
         :return: generated text
         """
-        self.eval()
-        # This is a placeholder, you may remove it.
-        generated = prefix + ', а потом купил мужик шляпу, а она ему как раз.'
         """
         YOUR CODE HERE (⊃｡•́‿•̀｡)⊃━✿✿✿✿✿✿
         Encode the prefix (do not forget the BOS token!),
@@ -67,4 +90,40 @@ class LanguageModel(nn.Module):
         until EOS token or reaching self.max_length.
         Do not forget to divide predicted logits by temperature before sampling
         """
-        return generated
+        self.eval()
+        generated_ids = [self.dataset.bos_id]
+
+        if prefix:
+            prefix_ids = self.dataset.text2ids(prefix)
+            generated_ids.extend(prefix_ids)
+
+        generated_ids = generated_ids[: self.max_length - 1]
+
+        input_tensor = torch.tensor(generated_ids, device=self.device).unsqueeze(0)
+
+        embedded = self.embedding(input_tensor)
+        output, hn = self.rnn(embedded)
+
+        for _ in range(self.max_length - len(generated_ids)):
+            probas = torch.softmax(self.linear(output[:, -1, :]) / temp, dim=-1)
+
+            next_token = torch.multinomial(probas, num_samples=1).item()
+            generated_ids.append(next_token)
+
+            if next_token == self.dataset.eos_id:
+                break
+
+            next_input = torch.tensor([[next_token]], device=self.device)
+            embedded_next = self.embedding(next_input)
+
+            output_next, hn = self.rnn(embedded_next, hn)
+            output = torch.cat([output, output_next], dim=1)
+
+        processed_ids = [
+            token
+            for token in generated_ids
+            if token not in {self.dataset.bos_id, self.dataset.eos_id}
+        ]
+
+        output_text = self.dataset.ids2text(processed_ids)
+        return output_text

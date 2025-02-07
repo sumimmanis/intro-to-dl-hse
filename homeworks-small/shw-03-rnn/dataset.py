@@ -3,6 +3,7 @@ import torch
 from typing import Union, List, Tuple
 from sentencepiece import SentencePieceTrainer, SentencePieceProcessor
 from torch.utils.data import Dataset
+from sklearn.model_selection import train_test_split
 
 
 class TextDataset(Dataset):
@@ -40,7 +41,9 @@ class TextDataset(Dataset):
         Split texts to train and validation fixing self.TRAIN_VAL_RANDOM_SEED
         The validation ratio is self.VAL_RATIO
         """
-        train_texts, val_texts = None, None
+
+        train_texts, val_texts = train_test_split(texts, train_size=(1 - self.VAL_RATIO), random_state=self.TRAIN_VAL_RANDOM_SEED)
+
         self.texts = train_texts if train else val_texts
         self.indices = self.sp_model.encode(self.texts)
 
@@ -83,9 +86,7 @@ class TextDataset(Dataset):
         :param item: text id
         :return: encoded text indices and its actual length (including BOS and EOS specials)
         """
-        # These are placeholders, you may remove them.
-        indices = torch.randint(high=self.vocab_size, size=(self.max_length, ))
-        length = torch.randint(low=1, high=self.max_length + 1, size=()).item()
+
         """
         YOUR CODE HERE (⊃｡•́‿•̀｡)⊃━✿✿✿✿✿✿
         Take corresponding index array from self.indices,
@@ -93,4 +94,13 @@ class TextDataset(Dataset):
         pad to self.max_length using self.pad_id.
         Return padded indices of size (max_length, ) and its actual length
         """
-        return indices, length
+
+        indices = self.indices[item]
+        length = min(self.max_length, len(indices) + 2)
+        
+        padded_tensor = torch.tensor(
+            [self.bos_id] + indices[:self.max_length - 2] + [self.eos_id] + [self.pad_id] * (self.max_length - length),
+            dtype=torch.int 
+        )
+
+        return padded_tensor, length
